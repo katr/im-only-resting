@@ -509,7 +509,12 @@ namespace Swensen.Ior.Forms
                 setUpFileDialogs();
                 if (requestSaveFileDialog.ShowDialog() == DialogResult.OK) {
                     fileName = requestSaveFileDialog.FileName;
-                    Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+                    String rootDir = System.IO.Path.GetPathRoot(fileName);
+                    String privateFile = rootDir + "private.txt";
+                    if (!File.Exists(privateFile))
+                    {
+                        Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+                    }
                 } else {
                     return;
                 }
@@ -550,7 +555,12 @@ namespace Swensen.Ior.Forms
             if (requestOpenFileDialog.ShowDialog() == DialogResult.OK) {
                 var fileName = requestOpenFileDialog.FileName;
                 openRequestFile(fileName);
-                Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+                String rootDir = System.IO.Path.GetPathRoot(fileName);
+                String privateFile = rootDir + "private.txt";
+                if (!File.Exists(privateFile))
+                {
+                    Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+                }
             }
         }
 
