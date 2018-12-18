@@ -1,8 +1,8 @@
 [User Guide](../../wiki/UserGuide) | [Downloads](http://www.swensensoftware.com/im-only-resting) | [Release Notes](../../wiki/ReleaseNotes) | [Issues](../../issues)
 
 ---
-> NOTE: If the Mainform designer fails to load, this is because it writes invalid \0 entries in the code.
->       If you search and replace \0 with nothing your form will load
+> **NOTE**: If the Mainform designer fails to load, this is because it writes invalid \0 entries in the code.
+>       If you search the designer code in MainForm.Designer.cs and replace \0 with nothing your form will load.
 >       Don't know why it's writing these values.
 
 ---
