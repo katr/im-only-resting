@@ -15,6 +15,11 @@ using NLog;
 using System.Xml;
 using System.Xml.Serialization;
 
+// *************************************************************************************************************************
+// * NOTE: If the Mainform designer fails to load, this is because it writes invalid \0 entries in the code.
+// *      If you search and replace \0 with nothing your form will load
+// *      Don't know why it's writing these values.
+// *************************************************************************************************************************
 //examples response types:
 //xml: http://www.w3schools.com/xml/note.asp
 //json: http://api.geonames.org/postalCodeLookupJSON?postalcode=6600&country=AT&username=demo

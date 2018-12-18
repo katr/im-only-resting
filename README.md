@@ -1,7 +1,11 @@
 [User Guide](../../wiki/UserGuide) | [Downloads](http://www.swensensoftware.com/im-only-resting) | [Release Notes](../../wiki/ReleaseNotes) | [Issues](../../issues)
 
 ---
+> NOTE: If the Mainform designer fails to load, this is because it writes invalid \0 entries in the code.
+>       If you search and replace \0 with nothing your form will load
+>       Don't know why it's writing these values.
 
+---
 I'm Only Resting is a feature-rich WinForms-based HTTP client that makes building and managing HTTP requests easy and offers various smart response content rendering modes.
 
 ![screenshot](http://www.swensensoftware.com/static/im-only-resting/front-page-example.png)
