@@ -62,6 +62,13 @@ namespace Swensen.Ior.Core {
 
                     var key = match.Groups[1].Value.Trim();
                     var value = match.Groups[2].Value.Trim();
+                    if (value.ToLower().Equals("auto"))
+                    {
+                        if ( key.ToLower().Equals("content-length"))
+                        {
+                            value = String.Format("{0}", vm.Body.Length);
+                        }
+                    }
                     if (requestHeaders.ContainsKey(key) || contentHeaders.ContainsKey(key))
                         validationErrors.Add("Invalid header line (duplicate key, comma-separate multiple values for one key): " + line);
                     else if (String.Equals(key, "authorization", StringComparison.OrdinalIgnoreCase) && !url.UserInfo.IsBlank()) {

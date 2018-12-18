@@ -1,0 +1,6 @@
+C:\Work\Tools\im-only-resting-1.1.1\bill\Utils\bin\Debug\Utils.dll
+C:\Work\Tools\im-only-resting-1.1.1\bill\Utils\bin\Debug\Utils.pdb
+C:\Work\Tools\im-only-resting-1.1.1\bill\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
+C:\Work\Tools\im-only-resting-1.1.1\bill\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Work\Tools\im-only-resting-1.1.1\bill\Utils\obj\Debug\Utils.dll
+C:\Work\Tools\im-only-resting-1.1.1\bill\Utils\obj\Debug\Utils.pdb
