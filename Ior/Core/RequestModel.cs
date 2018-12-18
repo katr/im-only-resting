@@ -22,9 +22,11 @@ using System.Reflection;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using Swensen.Utils;
+using NLog;
 
 namespace Swensen.Ior.Core {
     public class RequestModel {
+        private static readonly Logger log = LogManager.GetCurrentClassLogger();
         public Uri Url { get; private set;}
         public HttpMethod Method { get; private set; }
         public Dictionary<string, string> RequestHeaders { get; private set; }
@@ -67,6 +69,7 @@ namespace Swensen.Ior.Core {
                         if ( key.ToLower().Equals("content-length"))
                         {
                             value = String.Format("{0}", vm.Body.Length);
+                            log.Info("'auto' content-type detected.  content-length set to: {0}\r\nBody: \r\n{1}", vm.Body.Length, vm.Body);
                         }
                     }
                     if (requestHeaders.ContainsKey(key) || contentHeaders.ContainsKey(key))
