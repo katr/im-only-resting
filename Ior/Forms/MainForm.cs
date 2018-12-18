@@ -350,9 +350,46 @@ namespace Swensen.Ior.Forms
             }
         }
 
-        private RequestViewModel buildRequestViewModel() {
+        private RequestViewModel buildRequestViewModel(bool performReplacement = true) {
             //build the request view
             var checkedHttpMethod = rbGrpHttpMethods.First(x => x.Checked);
+            string Body = txtRequestBody.Text;
+
+            if (performReplacement)
+            {
+
+                int startIdx = Body.IndexOf("currentdate:[");
+                int origStartIdx = startIdx;
+                if (startIdx > 0)
+                {
+                    bool prompt = false;
+                    startIdx += 13;
+                    int endIdx = Body.IndexOf("]", startIdx);
+                    if (endIdx > startIdx)
+                    {
+                        string fullMatch = Body.Substring(origStartIdx, endIdx - origStartIdx + 1);
+                        string format = Body.Substring(startIdx, endIdx - startIdx);
+                        if (format.StartsWith("?"))
+                        {
+                            prompt = true;
+                            format = format.Substring(1);
+                        }
+                        String now = DateTime.Now.ToString(format);
+
+                        if (prompt)
+                        {
+                            DialogResult result = MessageBox.Show("currentdate: will be replaced with '" + now + "', continue to send?", "Confirm", MessageBoxButtons.YesNo);
+                            if (result == System.Windows.Forms.DialogResult.No) return null;
+                        }
+
+                        log.Info("Current date inserted into body.");
+                        log.Info("Orig :\r\n{0}", Body);
+                        Body = Body.Replace(fullMatch, now);
+                        log.Info("Final:\r\n{0}", Body);
+                    }
+                }
+            }
+
             return new RequestViewModel() {
                 Url = txtRequestUrl.Text,
                 Method = checkedHttpMethod == rbHttpOther ? txtHttpOther.Text : checkedHttpMethod.Tag as string,
@@ -527,7 +564,7 @@ namespace Swensen.Ior.Forms
                 return;                
             }
 
-            var requestVm = buildRequestViewModel();
+            var requestVm = buildRequestViewModel(false);
             requestVm.Save(fileName);
 
             if (updateLastSaveFileName )
