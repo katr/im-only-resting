@@ -382,7 +382,10 @@ namespace Swensen.Ior.Forms
                             if (result == System.Windows.Forms.DialogResult.No) return null;
                         }
 
+                        log.Info("Current date inserted into body.");
+                        log.Info("Orig :\r\n{0}", Body);
                         Body = Body.Replace(fullMatch, now);
+                        log.Info("Final:\r\n{0}", Body);
                     }
                 }
             }

@@ -35,3 +35,91 @@ Body: {
  
 [2018-12-18 08:15:10.2240] [WARN] {23128::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
 [2018-12-18 08:15:41.7929] [INFO] {23128::1} Swensen.Ior.Program - App shutting down 
+[2018-12-18 08:37:05.9785] [INFO] {18648::1} Swensen.Ior.Program - App starting 
+[2018-12-18 08:37:15.6944] [INFO] {18648::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 80
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123"
+}
+ 
+[2018-12-18 08:37:15.7692] [WARN] {18648::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:38:23.4908] [INFO] {18648::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 117
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now":"currentdate:[yyyy/MM/dd]"
+}
+ 
+[2018-12-18 08:38:23.5457] [WARN] {18648::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:39:24.3377] [INFO] {18648::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 117
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now":"currentdate:[yyyy/MM/dd]"
+}
+ 
+[2018-12-18 08:39:24.3944] [WARN] {18648::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:39:39.2224] [INFO] {18648::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 118
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now":"currentdate:[?yyyy/MM/dd]"
+}
+ 
+[2018-12-18 08:39:39.3046] [WARN] {18648::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:41:03.0721] [INFO] {11544::1} Swensen.Ior.Program - App starting 
+[2018-12-18 08:41:35.3109] [INFO] {11544::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 119
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now" : "currentdate[?yyyy-MM-dd]"
+}
+ 
+[2018-12-18 08:41:35.4202] [WARN] {11544::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:41:41.2401] [INFO] {11544::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 119
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now" : "currentdate[?yyyy-MM-dd]"
+}
+ 
+[2018-12-18 08:41:41.2983] [WARN] {11544::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:41:54.4805] [INFO] {11544::1} Swensen.Ior.Forms.MainForm - Current date inserted into body. 
+[2018-12-18 08:41:54.4805] [INFO] {11544::1} Swensen.Ior.Forms.MainForm - Orig :
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now" : "currentdate:[?yyyy-MM-dd]"
+}
+ 
+[2018-12-18 08:41:54.4805] [INFO] {11544::1} Swensen.Ior.Forms.MainForm - Final:
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now" : "2018-12-18"
+}
+ 
+[2018-12-18 08:41:54.4960] [INFO] {11544::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 120
+Body: 
+{
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123",
+  "now" : "currentdate:[?yyyy-MM-dd]"
+}
+ 
+[2018-12-18 08:41:54.5515] [WARN] {11544::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
