@@ -1,6 +1,0 @@
-C:\Work\Tools\im-only-resting-1.1.1\bill\Ior.Forms.PropertyGridEx\bin\Debug\PropertyGridEx.dll
-C:\Work\Tools\im-only-resting-1.1.1\bill\Ior.Forms.PropertyGridEx\bin\Debug\PropertyGridEx.pdb
-C:\Work\Tools\im-only-resting-1.1.1\bill\Ior.Forms.PropertyGridEx\obj\Debug\Ior.Forms.PropertyGridEx.csprojResolveAssemblyReference.cache
-C:\Work\Tools\im-only-resting-1.1.1\bill\Ior.Forms.PropertyGridEx\obj\Debug\Ior.Forms.PropertyGridEx.csproj.CoreCompileInputs.cache
-C:\Work\Tools\im-only-resting-1.1.1\bill\Ior.Forms.PropertyGridEx\obj\Debug\PropertyGridEx.dll
-C:\Work\Tools\im-only-resting-1.1.1\bill\Ior.Forms.PropertyGridEx\obj\Debug\PropertyGridEx.pdb
