@@ -1,0 +1,37 @@
+[2018-12-17 17:19:15.5120] [INFO] {19952::1} Swensen.Ior.Program - App starting 
+[2018-12-17 17:19:17.4014] [INFO] {19952::1} Swensen.Ior.Properties.Settings - Upgrading user settings 
+[2018-12-17 17:19:17.4244] [INFO] {19952::1} Swensen.Ior.Properties.HistorySettings - Upgrading history settings 
+[2018-12-17 17:19:29.9710] [INFO] {21624::1} Swensen.Ior.Program - App starting 
+[2018-12-17 17:19:33.9668] [INFO] {21624::1} Swensen.Ior.Program - App shutting down 
+[2018-12-17 17:22:04.8936] [WARN] {19952::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-17 17:22:21.2971] [INFO] {3648::1} Swensen.Ior.Program - App starting 
+[2018-12-17 17:22:40.7302] [INFO] {3648::1} Swensen.Ior.Program - App shutting down 
+[2018-12-17 17:23:04.9847] [INFO] {19952::1} Swensen.Ior.Program - App shutting down 
+[2018-12-17 17:25:01.7431] [INFO] {22780::1} Swensen.Ior.Program - App starting 
+[2018-12-17 17:34:24.5492] [INFO] {10784::1} Swensen.Ior.Program - App starting 
+[2018-12-17 17:34:54.8915] [WARN] {10784::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-17 17:35:19.6135] [WARN] {10784::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-17 17:40:25.5586] [INFO] {12384::1} Swensen.Ior.Program - App starting 
+[2018-12-17 17:42:59.8001] [INFO] {12384::1} Swensen.Ior.Program - App shutting down 
+[2018-12-18 08:08:14.9928] [INFO] {548::1} Swensen.Ior.Program - App starting 
+[2018-12-18 08:08:47.6269] [INFO] {24588::1} Swensen.Ior.Program - App starting 
+[2018-12-18 08:08:55.3096] [INFO] {24588::1} Swensen.Ior.Program - App shutting down 
+[2018-12-18 08:10:22.2965] [WARN] {548::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:14:39.6911] [INFO] {23128::1} Swensen.Ior.Program - App starting 
+[2018-12-18 08:14:53.1690] [INFO] {23128::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 80
+Body: {
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123"
+}
+ 
+[2018-12-18 08:14:53.2571] [WARN] {23128::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:15:10.1488] [INFO] {23128::1} Swensen.Ior.Core.RequestModel - 'auto' content-type detected.  content-length set to: 80
+Body: {
+  "emailAddress": "abc",
+  "emailSubject": "def",
+  "emailBody": "123"
+}
+ 
+[2018-12-18 08:15:10.2240] [WARN] {23128::1} Swensen.Ior.Core.IorClient - charset= not supported, falling back on iso-8859-1 
+[2018-12-18 08:15:41.7929] [INFO] {23128::1} Swensen.Ior.Program - App shutting down 

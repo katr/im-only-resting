@@ -543,7 +543,14 @@ namespace Swensen.Ior.Forms
                 setUpFileDialogs();
                 if (requestSaveFileDialog.ShowDialog() == DialogResult.OK) {
                     fileName = requestSaveFileDialog.FileName;
-                    Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+
+                    String rootDir = System.IO.Path.GetPathRoot(fileName);
+                    String privateFile = rootDir + "private.txt";
+
+                    if (!File.Exists(privateFile))
+                    {
+                        Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+                    }
                 } else {
                     return;
                 }
@@ -584,7 +591,13 @@ namespace Swensen.Ior.Forms
             if (requestOpenFileDialog.ShowDialog() == DialogResult.OK) {
                 var fileName = requestOpenFileDialog.FileName;
                 openRequestFile(fileName);
-                Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+
+                String rootDir = System.IO.Path.GetPathRoot(fileName);
+                String privateFile = rootDir + "private.txt";
+                if (!File.Exists(privateFile))
+                {
+                    Settings.Default.SaveRequestFileDialogFolder = FilePathFormatter.Format(fileName, FilePathFormat.FullDir);
+                }
             }
         }
 
@@ -652,8 +665,22 @@ namespace Swensen.Ior.Forms
             return MessageBox.Show(this, text, title, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
         }
 
+        private void DisplayContentLength()
+        {
+            int textLen = this.txtRequestBody.TextLength;
+            if (textLen == 0)
+            {
+                this.grpBody.Text = "Body (empty)";
+            }
+            else
+            {
+                this.grpBody.Text = String.Format("Body ({0} bytes)", textLen);
+            }
+        }
+
         private void txtRequestBody_TextChanged(object sender, EventArgs e) {
             setIsLastOpenedRequestFileDirtyToTrue();
+            DisplayContentLength();
         }
 
         private void txtRequestHeaders_TextChanged(object sender, EventArgs e) {
